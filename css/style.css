@@ -18,7 +18,7 @@ header, main, footer {
 
 p, span, li, a {
     font-weight: 600;
-    font-size: clamp(.9rem, 1.4vw, 1.5rem);
+    font-size: clamp(.8rem, 1.4vw, 1.5rem);
     color: #333;
 }
 
@@ -50,12 +50,10 @@ div.video > iframe {
 
 /* ESTILIZAÇÃO INDIVIDUAL */
 header {
-    /* background-color: aquamarine; */
+    background: linear-gradient(130deg, #2D5E27, #25AB13, #6DE35D);
     min-height: 30vh;
-    display: flex;
-    flex-flow: row wrap;
-    align-items: stretch;
-    gap: 1rem;
+    display: grid;
+    grid-template-rows: 1.5fr 1fr;
 }
 
 header > div.content-header {
@@ -67,27 +65,42 @@ header > div.content-header {
     gap: .5rem;
 }
 
-header div.content-header > h1, span {
+div.content-header > h1 {
     text-align: center;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: clamp(1.3rem, 3vw, 3rem);
+    margin-top: 1rem;
+    color: #fff;
 }
 
-div.content-header > h1 {
-    font-size: clamp(1.3rem, 3vw, 3rem);
-    padding: 1rem 0rem 0rem 0rem;
-    color: green;
+div.content-header > span {
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: clamp(.47rem, 1.4vw, 1.5rem);
+    padding: .2rem 1.5rem;
+    color: #fff;
+    background: linear-gradient(to left, #111, #222, #333);
+    clip-path: polygon(4% 0%, 100% 0%, 96% 100%, 0 100%);
 }
 
 header > nav {
     width: 100%;
     display: flex;
     align-items: flex-end;
-    gap: 1rem;
+    gap: 1.5rem;
 }
 
 header nav > a {
     text-decoration: none;
+    font-weight: 500;
+    color: #fff;
 }
 
+header nav > a:hover {
+    color: #abc1f7;
+}
 
 main {
     display: flex;
